@@ -7,19 +7,23 @@
 class Employee {
 // Attributes
 protected:
-    std::string name;
+    string name;
     int id;
-    std::string type; // "Hourly" or "Salaried"
+    string type; // "Hourly" or "Salaried"
 
 // Methods
 public:
 	// TODO: Constructor
-
+    Employee();
+    Employee(std::string name, int id, std::string type);
+   
     virtual ~Employee() {}
 
     // Virtual function to calculate payment
     virtual double calculatePay() const = 0;
 
+    string getType() const=0;
+    string getName() const=0;
     // TODO: Getters
 };
 
