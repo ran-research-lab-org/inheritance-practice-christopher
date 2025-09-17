@@ -61,7 +61,7 @@ int main() {
 
     // TODO: Add vectors to readFile call, hourly first
     readFile("employee_info.csv", hourlyEmployees, salariedEmployees);
-    double result = 0;
+    
 
     /* Llamar a la función que lee el archivo CSV y llena los vectores
     hourlyEmployees se llenará con los empleados tipo "Hourly"

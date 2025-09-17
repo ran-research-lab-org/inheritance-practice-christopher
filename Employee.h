@@ -19,12 +19,12 @@ public:
    
     virtual ~Employee() {}
 
-    // Virtual function to calculate payment
+    //función para calcular el pago
     virtual double calculatePay() const = 0;
 
     string getType() const=0;
     string getName() const=0;
-    // TODO: Getters
+   
 };
 
 #endif
