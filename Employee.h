@@ -3,7 +3,7 @@
 #define EMPLOYEE_H
 
 #include <string>
-
+using namespace std;
 class Employee {
 // Attributes
 protected:
@@ -15,7 +15,7 @@ protected:
 public:
 	// TODO: Constructor
     Employee();
-    Employee(std::string name, int id, std::string type);
+    Employee(string name, int id, string type);
    
     virtual ~Employee() {}
 

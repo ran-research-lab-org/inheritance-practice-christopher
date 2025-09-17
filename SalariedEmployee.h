@@ -2,13 +2,13 @@
 #define SALARIEDEMPLOYEE_H
 
 #include "Employee.h"
-
+using namespace std;
 class SalariedEmployee : public Employee {
 private:
     double yearlyPayment;
 public:
     SalariedEmployee();
-    SalariedEmployee(const std::string& name, int id, double yearlyPayment);
+    SalariedEmployee(const string& name, int id, double yearlyPayment);
     double getYearlyPayment()const;
     double calculatePay() const override;
 };

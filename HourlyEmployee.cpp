@@ -4,17 +4,16 @@ HourlyEmployee::HourlyEmployee(const std::string& name, int id,
                                 double payPerHour, double workedHours){
  
 }
-HourlyEmployee::double calculatePay() const override{
+double HourlyEmployee::calculatePay() const override{
     return workedHours * payPerHour;
 };
 
-HourlyEmployee::double getpayPerHour(){
+double HourlyEmployee::getpayPerHour()const {
     return payPerHour;
 };
 
-HourlyEmployee::double getworkedHours(){
+double HourlyEmployee::getworkedHours() const{
     return workedHours;
 }
 
-/*TODO: calculate Payment */
 
