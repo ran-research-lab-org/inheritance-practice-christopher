@@ -1,9 +1,17 @@
 #include "Employee.h"
-
-Employee::Employee(const std::string& name, int id, const std::string& type, 
-                   double payPerHour, double workedHours, double yearlyPayment)
-{
-  // TODO: 
+using namespace std;
+Employee::Employee(const string& name, int id, const string& type){
+  this->name = name;
+  this->id = id;
+  this->type = type;
+}
+//función para delvolver el tipo
+string Employee::getType(){
+  return type;
 }
 
-/* IMPLEMENT GETTERS*/
+//función para devolver el nombre
+string Employee::getName(){
+  return name;
+}
+

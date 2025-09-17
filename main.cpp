@@ -8,6 +8,7 @@
 
 using namespace std;
 
+
 // Reads CSV: ID,Name,Type,PayPerHour,WorkedHours,YearlyPayment
 void readFile(const string& filename, vector<HourlyEmployee>& hourlyEmployees, vector<SalariedEmployee>& salariedEmployees) {
     ifstream file(filename);
@@ -35,17 +36,43 @@ void readFile(const string& filename, vector<HourlyEmployee>& hourlyEmployees, v
     }
 }
 
+// Función que muestra en pantalla la información de los empleados y recibe los vectores 
+void displayEmployees(const vector<HourlyEmployee>& hourlyEmployees,
+                      const vector<SalariedEmployee>& salariedEmployees) {
+    cout << "Hourly Employees:\n";
+    for (const auto& emp : hourlyEmployees) {
+        cout << "ID: " << emp.getId()
+             << " | Name: " << emp.getName()
+             << " | Pay this period: $" << emp.calculatePay() << "\n";
+    }
+
+    cout << "\nSalaried Employees:\n";
+    for (const auto& emp : salariedEmployees) {
+        cout << "ID: " << emp.getId()
+             << " | Name: " << emp.getName()
+             << " | Pay this period: $" << emp.calculatePay() << "\n";
+    }
+}
+
 int main() {
     
-    /* TODO: Define two vectors: HourlyEmployee and SalariedEmployee */
+    vector<HourlyEmployee> hourlyEmployees;
+    vector<SalariedEmployee> salariedEmployees;
 
     // TODO: Add vectors to readFile call, hourly first
-    readFile("employee_info.csv", , );
-    double result = 0;
+    readFile("employee_info.csv", hourlyEmployees, salariedEmployees);
+    
 
-    // TODO: Print the results
-    // Remember that you can use the range based for loop
-    // Display the results of each type of employee
+    /* Llamar a la función que lee el archivo CSV y llena los vectores
+    hourlyEmployees se llenará con los empleados tipo "Hourly"
+    salariedEmployees se llenará con los empleados tipo "Salaried"*/
+   
+    /*
+    Llamar a la función que muestra en pantalla la información de los empleados
+     Recorre cada vector y muestra ID, nombre y pago calculad
+     */
+    displayEmployees(hourlyEmployees, salariedEmployees); 
+         
 
     return 0;
 }
